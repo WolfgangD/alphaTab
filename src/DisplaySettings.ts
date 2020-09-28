@@ -24,7 +24,11 @@ export enum StaveProfile {
      * Only guitar tablature is rendered, but also rests and time signatures are not shown.
      * This profile is typically used in multi-track scenarios.
      */
-    TabMixed
+    TabMixed,
+    /**
+     * Only slash notation is rendered.
+     */
+    Slash
 }
 
 /**

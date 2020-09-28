@@ -48,6 +48,7 @@ import { PageViewLayout } from '@src/rendering/layout/PageViewLayout';
 import { ScoreLayout } from '@src/rendering/layout/ScoreLayout';
 import { ScoreBarRendererFactory } from '@src/rendering/ScoreBarRendererFactory';
 import { ScoreRenderer } from '@src/rendering/ScoreRenderer';
+import { SlashBarRendererFactory } from '@src/rendering/SlashBarRendererFactory';
 import { TabBarRendererFactory } from '@src/rendering/TabBarRendererFactory';
 import { Settings } from '@src/Settings';
 import { FontLoadingChecker } from '@src/util/FontLoadingChecker';
@@ -488,6 +489,37 @@ export class Environment {
             new EffectBarRendererFactory('tab-effects', tabEffectInfos),
             new TabBarRendererFactory(false, false, false),
             new EffectBarRendererFactory('tab-bottom-effects', [new LyricsEffectInfo()])
+        ]);
+        staveProfiles.set(StaveProfile.Slash, [
+            new EffectBarRendererFactory('slash-effects', [
+                new TempoEffectInfo(),
+                new TripletFeelEffectInfo(),
+                new MarkerEffectInfo(),
+                new TextEffectInfo(),
+                new ChordsEffectInfo(),
+                new FermataEffectInfo(),
+                new WhammyBarEffectInfo(),
+                new TrillEffectInfo(),
+                new OttaviaEffectInfo(true),
+                new WideBeatVibratoEffectInfo(),
+                new SlightBeatVibratoEffectInfo(),
+                new WideNoteVibratoEffectInfo(),
+                new SlightNoteVibratoEffectInfo(),
+                new FadeInEffectInfo(),
+                new LetRingEffectInfo(),
+                new PalmMuteEffectInfo(),
+                new PickStrokeEffectInfo(),
+                new PickSlideEffectInfo(),
+                new LeftHandTapEffectInfo(),
+                new AlternateEndingsEffectInfo()
+            ]),
+            new SlashBarRendererFactory(),
+            new EffectBarRendererFactory('score-bottom-effects', [
+                new CrescendoEffectInfo(),
+                new OttaviaEffectInfo(false),
+                new DynamicsEffectInfo(),
+                new LyricsEffectInfo()
+            ])
         ]);
 
         return staveProfiles;

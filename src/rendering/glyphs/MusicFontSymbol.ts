@@ -48,6 +48,11 @@ export enum MusicFontSymbol {
     NoteHiHatHalf = 0xe0f7,
     NoteChineseCymbal = 0xe0f9,
 
+    SlashHorizontalEnds = 0xe101,
+    SlashHalf = 0xe103,
+    SlashDiamond = 0xe104,
+    SlashDead = 0xe106,
+
     FooterUpEighth = 0xe240,
     FooterDownEighth = 0xe241,
 

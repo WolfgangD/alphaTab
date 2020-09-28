@@ -45,6 +45,7 @@ export class PartConfiguration {
                         let staff: Staff = track.staves[staffIndex];
                         staff.showTablature = trackConfig.showTablature;
                         staff.showStandardNotation = trackConfig.showStandardNotation;
+                        staff.showSlashNotation = trackConfig.showSlash;
                     }
                 }
                 trackIndex++;

@@ -72,6 +72,11 @@ export class Staff {
     public showStandardNotation: boolean = true;
 
     /**
+     * Gets or sets whether the slash notation is shown.
+     */
+    public showSlashNotation: boolean = false;
+
+    /**
      * Gets or sets whether the staff contains percussion notation
      */
     public isPercussion: boolean = false;
@@ -84,6 +89,7 @@ export class Staff {
         dst.displayTranspositionPitch = src.displayTranspositionPitch;
         dst.showStandardNotation = src.showStandardNotation;
         dst.showTablature = src.showTablature;
+        dst.showSlashNotation = src.showSlashNotation;
         dst.isPercussion = src.isPercussion;
     }
 

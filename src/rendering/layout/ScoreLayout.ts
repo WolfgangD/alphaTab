@@ -199,6 +199,8 @@ export abstract class ScoreLayout {
                     staveProfile = hasScore ? StaveProfile.TabMixed : StaveProfile.Tab;
                 } else if (staff.showStandardNotation) {
                     staveProfile = StaveProfile.Score;
+                } else if (staff.showSlashNotation) {
+                    staveProfile = StaveProfile.Slash;
                 } else {
                     continue;
                 }
